@@ -79,14 +79,13 @@ if (process.env.INPUT_MSGTYPE === 'template_card') {
 
   payload.msgtype = process.env.INPUT_MSGTYPE;
   let template_card;
+  console.log('input message ', process.env.INPUT_TEMPLATE_CARD)
   try {
     template_card = JSON.parse(process.env.INPUT_TEMPLATE_CARD);
   } catch (error) {
     template_card = {};
   }
-  payload.template_card = {
-    template_card,
-  };
+  payload.template_card = template_card;
 
 }
 
