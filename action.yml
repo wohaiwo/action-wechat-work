@@ -1,5 +1,5 @@
 # action.yml
-name: 'GitHub Action for WeChat Work'
+name: 'GitHub Action for WeChat Work Test'
 description: 'Send WeChat Work message. Run on any operating platform, such as Windows, Linux, Mac supported by GitHub'
 author: 'chf007 <chf007server@gmail.com>'
 branding:
