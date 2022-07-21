@@ -5099,6 +5099,21 @@ if (process.env.INPUT_MSGTYPE === 'file') {
 
 }
 
+if (process.env.INPUT_MSGTYPE === 'template_card') {
+
+  payload.msgtype = process.env.INPUT_MSGTYPE;
+  let template_card;
+  try {
+    template_card = JSON.parse(process.env.INPUT_TEMPLATE_CARD);
+  } catch (error) {
+    template_card = {};
+  }
+  payload.template_card = {
+    template_card,
+  };
+
+}
+
 console.log('The message content in JSON format...');
 console.log(JSON.stringify(payload));
 
